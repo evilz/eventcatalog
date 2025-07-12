@@ -41,3 +41,7 @@ examples/default/public/ai
 **/[...auth].ts
 
 dev-scripts/
+
+# .NET
+[Bb]in/
+[Oo]bj/

@@ -1,0 +1,31 @@
+@page "/events"
+@using EventCatalog.Core
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Events</PageTitle>
+
+<h1>Events</h1>
+
+@if (events == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var ev in events)
+        {
+            <li>@ev.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private Event[] events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        events = await Http.GetFromJsonAsync<Event[]>("events");
+    }
+}

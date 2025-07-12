@@ -1,0 +1,31 @@
+@page "/services"
+@using EventCatalog.Core
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Services</PageTitle>
+
+<h1>Services</h1>
+
+@if (services == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var service in services)
+        {
+            <li>@service.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private Service[] services;
+
+    protected override async Task OnInitializedAsync()
+    {
+        services = await Http.GetFromJsonAsync<Service[]>("services");
+    }
+}

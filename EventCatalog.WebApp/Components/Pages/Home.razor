@@ -1,0 +1,31 @@
+@page "/"
+@using EventCatalog.Core
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Home</PageTitle>
+
+<h1>Domains</h1>
+
+@if (domains == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var domain in domains)
+        {
+            <li>@domain.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private Domain[] domains;
+
+    protected override async Task OnInitializedAsync()
+    {
+        domains = await Http.GetFromJsonAsync<Domain[]>("domains");
+    }
+}
