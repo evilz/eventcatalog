@@ -1,0 +1,16 @@
+@page "/visualiser/{type}/{id}/{version}"
+
+@using EventCatalog.Blazor.Components
+
+<Diagram Type="@Type" Id="@Id" Version="@Version" />
+
+@code {
+    [Parameter]
+    public string Type { get; set; }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public string Version { get; set; }
+}

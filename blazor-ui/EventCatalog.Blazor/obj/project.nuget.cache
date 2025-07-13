@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "va27j0CftF5aVFjIrcrwvEQvtyuAU6sOmqfZTN2U2yqcFHXyjfnHsAk5PiaAkIUmtILcIQx3vjsRG6PzxgoWdg==",
+  "success": true,
+  "projectFilePath": "/app/blazor-ui/EventCatalog.Blazor/EventCatalog.Blazor.csproj",
+  "expectedPackageFiles": [
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.authorization/8.0.0/microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.components/8.0.0/microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.components.analyzers/8.0.0/microsoft.aspnetcore.components.analyzers.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.components.forms/8.0.0/microsoft.aspnetcore.components.forms.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.components.web/8.0.0/microsoft.aspnetcore.components.web.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.aspnetcore.metadata/8.0.0/microsoft.aspnetcore.metadata.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/microsoft.jsinterop/8.0.0/microsoft.jsinterop.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/svgpathproperties/1.1.2/svgpathproperties.1.1.2.nupkg.sha512",
+    "/home/jules/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/yamldotnet/16.3.0/yamldotnet.16.3.0.nupkg.sha512",
+    "/home/jules/.nuget/packages/z.blazor.diagrams/3.0.3/z.blazor.diagrams.3.0.3.nupkg.sha512",
+    "/home/jules/.nuget/packages/z.blazor.diagrams.core/3.0.3/z.blazor.diagrams.core.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

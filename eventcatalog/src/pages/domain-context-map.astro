@@ -1,0 +1,8 @@
+---
+import VisualiserLayout from '../layouts/VisualiserLayout.astro';
+
+const url = `/blazor/visualiser/domain-context-map`;
+---
+<VisualiserLayout title="Domain Context Map">
+    <iframe src={url} width="100%" height="800px" style="border:none;"></iframe>
+</VisualiserLayout>

@@ -1,0 +1,9 @@
+---
+import VisualiserLayout from '../layouts/VisualiserLayout.astro';
+
+const { type, id, version } = Astro.params;
+const url = `/blazor/visualiser/${type}/${id}/${version}`;
+---
+<VisualiserLayout title="Visualiser">
+    <iframe src={url} width="100%" height="800px" style="border:none;"></iframe>
+</VisualiserLayout>
