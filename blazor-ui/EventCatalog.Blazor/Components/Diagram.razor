@@ -1,0 +1,44 @@
+@using Z.Blazor.Diagrams
+@using Z.Blazor.Diagrams.Core
+@using Z.Blazor.Diagrams.Core.Models
+@using EventCatalog.Blazor.Models
+
+@inject NodeGraphService NodeGraphService
+
+<div style="height: 800px; width: 100%;">
+    <Diagram @ref="_diagram" />
+</div>
+
+@code {
+    private Diagram _diagram;
+
+    [Parameter]
+    public string Type { get; set; }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public string Version { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var (nodes, edges) = await GetNodesAndEdges();
+
+        _diagram.Nodes.Add(nodes.Select(n => new NodeModel(new Point(n.Position.X, n.Position.Y)) { Title = n.Data.label }));
+        _diagram.Links.Add(edges.Select(e => new LinkModel(e.Source, e.Target) { Label = e.Label }));
+    }
+
+    private Task<(List<Node<object>>, List<Edge>)> GetNodesAndEdges()
+    {
+        return Type switch
+        {
+            "domain-context-map" => NodeGraphService.GetNodesAndEdgesForDomainContextMap(),
+            "domain" => NodeGraphService.GetNodesAndEdgesForDomain(Id, Version),
+            "service" => NodeGraphService.GetNodesAndEdgesForService(Id, Version),
+            "message" => NodeGraphService.GetNodesAndEdgesForMessage(Id, Version, "events"), // Assuming events for now
+            "flow" => NodeGraphService.GetNodesAndEdgesForFlow(Id, Version),
+            _ => Task.FromResult<(List<Node<object>>, List<Edge>)>((new List<Node<object>>(), new List<Edge>()))
+        };
+    }
+}
